@@ -26,7 +26,7 @@ This project utilizes Django, Flask, and Docker to create a web application. It 
 * Docker Compose file defines services, network, and dependencies
 * Containers are built based on Dockerfiles and connected via an internal network
 
-### API Post request between Flask and Django container:
+### API Post request between Flask and Django containers:
 
 In the described scenario, where there are two containers running—one for the Flask application and another for the Django API—communication between them is facilitated by Docker's internal network.
 

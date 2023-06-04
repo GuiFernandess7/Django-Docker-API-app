@@ -6,7 +6,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 RUN set -e; \
     apt-get update ;\
     apt-get -y install netcat ;\
-    apt-get -y install gettext ;
+    apt-get -y install gettext ;\
+    apt-get -y install dos2unix ;
 
 RUN mkdir /code
 COPY . /code/
@@ -19,5 +20,3 @@ RUN set -e; \
 
 EXPOSE 8000
 ENTRYPOINT ["/code/docker/entrypoints/entrypoint.sh"]
-
-

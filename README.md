@@ -1,4 +1,4 @@
-# Django Ecommerce API
+# Django E-commerce API app
 
 #### Tools Used:
 * Django

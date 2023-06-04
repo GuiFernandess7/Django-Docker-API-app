@@ -56,3 +56,7 @@ http http://api:8000/contact/ name='Your name' message='test' email='youremail@e
 
 This works because Docker Compose automatically sets up a DNS resolver that maps the service names to the IP addresses of the respective containers within the internal network. By referring to the Django API container by its service name, you can seamlessly interact with it from the Flask container.
 
+Result:
+
+<img width="771" alt="Captura de tela 2023-06-04 181522" src="https://github.com/GuiFernandess7/Django-Ecommerce-API/assets/63022500/c494c2e5-ce66-4162-898d-b57fa87b873b">
+

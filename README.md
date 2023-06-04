@@ -26,6 +26,17 @@ This project utilizes Django, Flask, and Docker to create a web application. It 
 * Docker Compose file defines services, network, and dependencies
 * Containers are built based on Dockerfiles and connected via an internal network
 
+### API Testing
+
+In the described scenario, where there are two containers running—one for the Flask application and another for the Django API—communication between them is facilitated by Docker's internal network.
+
+When you run the containers using Docker Compose or Docker, they are placed in the same internal network, allowing communication between them using the service names defined in the Docker Compose configuration file.
+
+To make a request from the Flask container to the Django API container, you can use the service name defined in the Docker Compose file as the hostname. For example, if the service name for the Django API container is api, you can make a request to http://api:8000/endpoint within the Flask container.
+
+This works because Docker Compose automatically sets up a DNS resolver that maps the service names to the IP addresses of the respective containers within the internal network. By referring to the Django API container by its service name, you can seamlessly interact with it from the Flask container.
+
+
 To run the project, follow these steps:
 
 Clone the repository.

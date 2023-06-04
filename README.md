@@ -19,7 +19,6 @@ This project utilizes Django, Flask, and Docker to create a web application. It 
 
 * Serves as a separate service alongside the Django API
 * Provides a simple endpoint ("/") returning a "Hello DRF!" message
-* Docker:
 
 ### Docker (Containers):
 * Two Docker containers: one for the Django API and another for the Flask application

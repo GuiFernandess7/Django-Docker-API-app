@@ -1,40 +1,37 @@
-# Django Rest Framework (DRF) Course
-Welcome to this full Django Rest Framework (DRF)course. 
-This course is perfect if you are looking to learn DRF and build your own API application.
-***
-***
+# Django Ecommerce API
 
-## Prerequisites
-- Python=>3.10
+Tools Used
+* Django
+* Flask
+* Docker
 
-## Considerations
-I have added optional docker containers to simplify the build. If you want to use the docker build you should install Docker and Docker Compose on your local machine.
+### Description: 
 
-We will be calling our API throughout the next 8 modules. I have written the requests in (Curl)[https://curl.se/] and (Httpie)[https://httpie.io/]. 
+This project utilizes Django, Flask, and Docker to create a web application. It consists of two main components: an API built with Django Rest Framework and an application built with Flask. The project leverages Docker for containerization, providing an isolated and reproducible environment.
 
-(Httpie)[https://httpie.io/] provides a clean terminal output which is handy for this type of project. You will need to install it locally if you want to use the commands.
->Note: (Httpie)[https://httpie.io/] is pre-installed in the docker container.
-***
-***
+### API (Django):
 
-## Getting started
-First you will need to clone down the first module.
+* Provides endpoints for various functionalities such as creating contact entries
+* Utilizes Django's models, serializers, and views
+* Application (Flask):
 
-1) Create a new directory on your local machine. I have called mine drf_course. This is your 'root directory'.
+### APP (Flask):
 
-2) Open a terminal and cd into the root directory.
+* Serves as a separate service alongside the Django API
+* Provides a simple endpoint ("/") returning a "Hello DRF!" message
+* Docker:
 
-3) You can now clone the first module. You can do this a few different ways. I use SSH...
+### Docker (Containers):
+* Two Docker containers: one for the Django API and another for the Flask application
+* Docker Compose file defines services, network, and dependencies
+* Containers are built based on Dockerfiles and connected via an internal network
 
-```
-#option 1 - SSH
-git clone --module_1 basics git@github.com:bobby-didcoding/drf_course.git .
+To run the project, follow these steps:
 
-#option 2 - Github CLI
-gh repo clone bobby-didcoding/drf_course .
-git checkout module_1
-
-#option 3 - HTTPS
-git clone --branch module_1 https://github.com/bobby-didcoding/drf_course.git .
-```
+Clone the repository.
+Install Docker on your system.
+Navigate to the project directory.
+Run the command: docker-compose up
+Access the Flask application at http://localhost:5000
+Interact with the Django API at http://localhost:8000
 

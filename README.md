@@ -11,7 +11,7 @@ This project utilizes Django, Flask, and Docker to create a web application. It 
 
 ### API (Django):
 
-* Provides endpoints for various functionalities such as creating contact entries
+* Provides endpoints for functionalities such as creating contact entries, items and stocks
 * Utilizes Django's models, serializers, and views
 
 ### APP (Flask):

@@ -33,7 +33,7 @@ When you run the containers using Docker Compose or Docker, they are placed in t
 To make a request from the Flask container to the Django API container, you can use the service name defined in the Docker Compose file as the hostname. For example, if the service name for the Django API container is api, you can make a request to http://api:8000/endpoint within the Flask container terminal:
 
 ```
-http http://api:8000/contact/ name="Your name" message="test" email="youremail@email.com"
+http http://api:8000/contact/ name='Your name' message='test' email='youremail@email.com'
 ```
 
 This works because Docker Compose automatically sets up a DNS resolver that maps the service names to the IP addresses of the respective containers within the internal network. By referring to the Django API container by its service name, you can seamlessly interact with it from the Flask container.
